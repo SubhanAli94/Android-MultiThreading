@@ -137,13 +137,23 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         public void run() {
 
             if (isNetworkAvailable()) {
-                MainActivity.this.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        mLoadingSection.setVisibility(View.VISIBLE);
-                    }
-                });
-                downloadImageUsingThread(mImageUrl);
+
+                if (mImageUrl != null) {
+                    MainActivity.this.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            mLoadingSection.setVisibility(View.VISIBLE);
+                        }
+                    });
+                    downloadImageUsingThread(mImageUrl);
+                } else {
+                    MainActivity.this.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(MainActivity.this, "Please select any url from list below", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
             } else {
                 MainActivity.this.runOnUiThread(new Runnable() {
                     @Override
