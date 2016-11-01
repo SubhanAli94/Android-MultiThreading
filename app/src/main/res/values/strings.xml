@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AndroidMultiThreading</string>
+    <string name="select_url_from_below">Select Url From Below</string>
+    <string name="loading">Loading...</string>
+    <string name="download">Download</string>
+
+    <string-array name="listitems">
+        <item>http://images.artid.com/images/members/8015/7228524zoomed.jpeg</item>
+        <item>https://s-media-cache-ak0.pinimg.com/736x/36/3f/7d/363f7d8a5819ebfda80e7113efa4a347.jpg</item>
+    </string-array>
+</resources>
