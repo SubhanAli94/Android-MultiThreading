@@ -111,6 +111,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 }
             });
 
+            if (httpURLConnection != null) {
+                httpURLConnection.disconnect();
+            }
             if (inputStream != null) {
                 try {
                     inputStream.close();
